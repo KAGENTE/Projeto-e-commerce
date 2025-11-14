@@ -35,7 +35,7 @@ export const AdminController = {
   // Adicionar um produto
   async addProduct(req: Request, res: Response) {
     try {
-      const { name, description, price, sku, stock } = req.body;
+      const { name,imgUrl, description, price, sku, stock } = req.body;
 
       if (!name || !price || !sku) {
         return res.status(400).json({ error: "Campos obrigatórios: name, price, sku" });
@@ -44,6 +44,7 @@ export const AdminController = {
       const product = await prisma.product.create({
         data: {
           name,
+          imgUrl,
           description,
           price,
           sku,
