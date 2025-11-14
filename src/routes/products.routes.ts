@@ -5,6 +5,5 @@ const router = Router();
 
 router.get('/', getAllProducts);
 router.get('/:id', getProductById);
-router.post('/', createProduct); // proteger em produção com auth e validação
-
+router.post('/', createProduct);
 export default router;
