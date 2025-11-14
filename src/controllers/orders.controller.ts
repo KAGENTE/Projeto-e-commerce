@@ -20,7 +20,7 @@ export const OrderController = {
 
       const order = await prisma.order.create({
         data: {
-          itens: itens as Prisma.JsonValue, // <-- cast adicionado
+          itens,
           total,
         },
       });
