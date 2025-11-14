@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import { AuthRequest } from "../middlewares/authMiddleware";
+import { AuthRequest } from "../middlewares/auth.middleware";
 
 const prisma = new PrismaClient();
 
@@ -40,7 +40,6 @@ export const ReviewController = {
     }
   },
 
-  // Listar todas as reviews de um produto
   async listByProduct(req: Request, res: Response) {
     try {
       const productId = Number(req.params.productId);
