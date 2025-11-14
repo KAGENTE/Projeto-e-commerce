@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto - YoiNeru</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* NOVAS CLASSES PARA DETALHES DO PRODUTO */
+    .produto-detalhe-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: var(--branco);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .produto-imagem {
+      flex: 1 1 400px;
+      max-width: 400px;
+      border-radius: 8px;
+      background-color: var(--lilas-suave);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .produto-imagem img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .produto-info {
+      flex: 2 1 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .produto-info h2 {
+      color: var(--roxo-principal);
+      font-size: 2em;
+    }
+
+    .produto-info .price {
+      font-weight: bold;
+      color: var(--roxo-secundario);
+      font-size: 1.5em;
+    }
+
+    .produto-info p {
+      font-size: 1.1em;
+      color: var(--texto-escuro);
+    }
+
+    /* COMENTÁRIOS */
+    .comentarios-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: var(--branco);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .comentario {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .comentario:last-child {
+      border-bottom: none;
+    }
+
+    .comentario strong {
+      color: var(--roxo-principal);
+    }
+
+    .avaliacao {
+      color: var(--roxo-secundario);
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .nova-avaliacao textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .nova-avaliacao button {
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">YoiNeru</div>
+    <nav>
+      <a href="#" class="nav-link active" data-categoria="feminino">Feminino</a>
+      <a href="#" class="nav-link" data-categoria="masculino">Masculino</a>
+      <a href="cart.html" class="nav-link" data-categoria="carrinho">Carrinho</a>
+      <a href="account.html" class="nav-link" data-categoria="conta">Conta</a>
+    </nav>
+  </header>
+
+  <!-- DETALHES DO PRODUTO -->
+  <section class="produto-detalhe-container">
+    <div class="produto-imagem">
+      <img src="https://via.placeholder.com/400x400" alt="Produto Exemplo">
+    </div>
+    <div class="produto-info">
+      <h2>Produto Exemplo</h2>
+      <p class="price">R$ 149,90</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae libero at lorem vulputate fermentum.</p>
+      <p>SKU: PROD12345</p>
+      <p>Estoque disponível: 12 unidades</p>
+      <button class="cta-button">Adicionar ao Carrinho</button>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIOS E AVALIAÇÕES -->
+  <section class="comentarios-container">
+    <h3>Comentários e Avaliações</h3>
+
+    <!-- Comentários existentes -->
+    <div class="comentario">
+      <strong>Maria</strong> <span class="avaliacao">★★★★☆</span>
+      <p>Produto de ótima qualidade, chegou rápido!</p>
+    </div>
+    <div class="comentario">
+      <strong>João</strong> <span class="avaliacao">★★★☆☆</span>
+      <p>Gostei do produto, mas poderia ter mais opções de cores.</p>
+    </div>
+
+    <!-- Adicionar novo comentário -->
+    <div class="nova-avaliacao">
+      <h4>Deixe sua avaliação</h4>
+      <textarea placeholder="Escreva seu comentário..."></textarea>
+      <button class="cta-button">Enviar Avaliação</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 YoiNeru. Projeto Acadêmico.</p>
+  </footer>
+
+</body>
+</html>
