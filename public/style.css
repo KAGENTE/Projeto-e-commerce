@@ -1,0 +1,138 @@
+:root {
+    --roxo-principal: #581957;
+    --roxo-secundario: #9d38bd;
+    --lilas-suave: #d8bfd8;
+    --branco: #ffffff;
+    --texto-escuro: #3b103a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--lilas-suave);
+    color: var(--texto-escuro);
+}
+
+/* --- HEADER e NAV --- */
+
+header {
+    background-color: var(--roxo-principal);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent; /* Para a animação da guia */
+    transition: all 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid var(--roxo-secundario);
+    color: var(--roxo-secundario); /* Destaque no texto ao passar o mouse ou ativo */
+}
+
+/* --- HERO SECTION --- */
+
+.hero {
+    background-color: var(--lilas-suave);
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--roxo-principal);
+}
+
+.cta-button {
+    background-color: var(--roxo-secundario);
+    color: var(--branco);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--roxo-principal);
+}
+
+/* --- PRODUTOS SECTION --- */
+
+.produtos {
+    padding: 40px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.produto-card {
+    background-color: var(--branco);
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* Placeholder para simular uma imagem */
+    background-color: var(--lilas-suave);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.produto-card h3 {
+    margin: 15px 0 5px;
+    color: var(--roxo-principal);
+}
+
+.produto-card p {
+    color: var(--roxo-secundario);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--roxo-principal);
+    color: var(--branco);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
