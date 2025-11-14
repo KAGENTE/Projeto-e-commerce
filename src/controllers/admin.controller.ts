@@ -1,0 +1,60 @@
+import { Request, Response } from "express";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
+export const AdminController = {
+
+  // Listar todos os pedidos
+  async getAllOrders(req: Request, res: Response) {
+    try {
+      const orders = await prisma.order.findMany({
+        orderBy: { id: "desc" }
+      });
+      return res.json(orders);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: "Erro ao buscar pedidos." });
+    }
+  },
+
+  // Listar todos os usuários
+  async getAllUsers(req: Request, res: Response) {
+    try {
+      const users = await prisma.user.findMany({
+        orderBy: { id: "desc" },
+        select: { id: true, email: true, name: true, role: true, createdAt: true }
+      });
+      return res.json(users);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: "Erro ao buscar usuários." });
+    }
+  },
+
+  // Adicionar um produto
+  async addProduct(req: Request, res: Response) {
+    try {
+      const { name, description, price, sku, stock } = req.body;
+
+      if (!name || !price || !sku) {
+        return res.status(400).json({ error: "Campos obrigatórios: name, price, sku" });
+      }
+
+      const product = await prisma.product.create({
+        data: {
+          name,
+          description,
+          price,
+          sku,
+          stock: stock || 0
+        }
+      });
+
+      return res.status(201).json(product);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: "Erro ao criar produto." });
+    }
+  }
+};
