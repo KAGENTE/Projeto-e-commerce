@@ -34,6 +34,9 @@ header {
     font-weight: bold;
     letter-spacing: 2px;
 }
+.logo:hover{
+    cursor: pointer;
+}
 
 nav a {
     color: var(--branco);
@@ -135,4 +138,78 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
+}
+/* --- ADMIN PRODUTOS --- */
+
+.produtos-admin {
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    gap: 20px;
+}
+
+.produto-admin-card {
+    background-color: var(--branco);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.produto-admin-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produto-info {
+    flex: 1;
+}
+
+.produto-info h3 {
+    color: var(--roxo-principal);
+    margin-bottom: 5px;
+}
+
+.produto-info p {
+    color: var(--texto-escuro);
+    margin: 3px 0;
+}
+
+.admin-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: var(--roxo-secundario);
+    color: var(--branco);
+    transition: 0.2s;
+}
+
+.btn-delete {
+    background-color: #c0392b;
+}
+
+.btn-edit:hover {
+    background-color: var(--roxo-principal);
+}
+
+.btn-delete:hover {
+    background-color: #96281b;
 }

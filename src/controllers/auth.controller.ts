@@ -42,8 +42,8 @@ export const login = async (req: Request, res: Response) => {
       return res.status(401).json({ message: "Senha incorreta." });
     }
 
-    const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "1d" });
-    res.json({ message: "Login realizado com sucesso.", token });
+    const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, { expiresIn: "1d" });
+    res.json({ message: "Login realizado com sucesso.", token, role: user.role });
   } catch (error) {
     res.status(500).json({ message: "Erro ao fazer login.", error });
   }
