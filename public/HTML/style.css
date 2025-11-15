@@ -213,3 +213,71 @@ footer {
 .btn-delete:hover {
     background-color: #96281b;
 }
+/* --- ADMIN PEDIDOS --- */
+
+.pedidos-admin {
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.pedidos-lista {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pedido-card {
+    background-color: var(--branco);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-info {
+    flex: 1;
+}
+
+.pedido-info h3 {
+    color: var(--roxo-principal);
+    margin-bottom: 8px;
+}
+
+.pedido-info p {
+    color: var(--texto-escuro);
+    margin: 4px 0;
+}
+
+.pedido-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-status, .btn-delete-order {
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: var(--roxo-secundario);
+    color: var(--branco);
+    transition: 0.2s;
+}
+
+.btn-delete-order {
+    background-color: #c0392b;
+}
+
+.btn-status:hover {
+    background-color: var(--roxo-principal);
+}
+
+.btn-delete-order:hover {
+    background-color: #96281b;
+}

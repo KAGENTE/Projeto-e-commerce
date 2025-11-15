@@ -1,5 +1,14 @@
+const API_URL = "http://localhost:3000/api";
+
 const form = document.getElementById("addProductForm");
 const msg = document.getElementById("msg");
+
+const token = sessionStorage.getItem("token");
+
+// Se não estiver logado → redireciona
+if (!token) {
+  window.location.href = "login.html";
+}
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -14,12 +23,12 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const res = await fetch("/admin/product", {
+    const res = await fetch(`${API_URL}/admin/product`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
       },
-      credentials: "include", // envia cookies de login
       body: JSON.stringify(data)
     });
 
@@ -33,7 +42,6 @@ form.addEventListener("submit", async (e) => {
 
     msg.style.color = "green";
     msg.textContent = "Produto criado com sucesso!";
-
     form.reset();
 
   } catch (err) {
