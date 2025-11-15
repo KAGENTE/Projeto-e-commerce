@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
+import { AuthRequest } from "../interfaces/req.interface";
 
 const prisma = new PrismaClient();
 
@@ -31,6 +32,30 @@ export const AdminController = {
       return res.status(500).json({ error: "Erro ao buscar usuários." });
     }
   },
+
+  async listByUserId(req: AuthRequest, res: Response) {
+  try {
+    const userId = Number(req.params.userId);
+    if (isNaN(userId)) {
+      return res.status(400).json({ error: "ID de usuário inválido." });
+    }
+
+    const orders = await prisma.order.findMany({
+      where: { userId },
+      orderBy: { id: "desc" },
+      include: {
+        user: { select: { id: true, name: true, email: true } }
+      }
+    });
+
+    return res.json(orders);
+
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: "Erro ao buscar pedidos do usuário." });
+  }
+},
+
 
   // Adicionar um produto
   async addProduct(req: Request, res: Response) {

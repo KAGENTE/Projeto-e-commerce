@@ -74,4 +74,29 @@ export const OrderController = {
       return res.status(500).json({ error: "Erro ao buscar pedido." });
     }
   },
+
+  async listByUser(req: AuthRequest, res: Response) {
+    try {
+      const userId =
+        typeof req.user === "object" && "id" in req.user ? req.user.id : null;
+
+      if (!userId) {
+        return res.status(401).json({ error: "Usuário não autenticado." });
+      }
+
+      const orders = await prisma.order.findMany({
+        where: { userId },
+        orderBy: { id: "desc" }
+      });
+
+      return res.json(orders);
+
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: "Erro ao buscar pedidos do usuário." });
+    }
+  },
+
 };
+
+

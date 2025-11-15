@@ -7,4 +7,5 @@ const router = Router();
 router.post("/reviews", authenticate, ReviewController.create);
 router.get("/products/:productId/reviews", ReviewController.listByProduct);
 
+
 export default router;
