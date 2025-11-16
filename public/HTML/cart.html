@@ -12,8 +12,6 @@
     <header>
         <div class="logo" href="index.html">YoiNeru</div>
         <nav>
-            <a href="index.html" class="nav-link" data-categoria="feminino">Feminino</a>
-            <a href="index.html" class="nav-link" data-categoria="masculino">Masculino</a>
             <a href="cart.html" class="nav-link active" data-categoria="carrinho">Carrinho</a>
             <a href="account.html" class="nav-link" data-categoria="conta">Conta</a>
         </nav>
@@ -25,35 +23,13 @@
         <p>Confira os produtos adicionados e finalize sua compra.</p>
 
         <section class="produtos">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/300x250" alt="Produto 1">
-                <h3>Vestido Lilás</h3>
-                <p>R$ 129,90</p>
-                <button class="cta-button">Remover</button>
-            </div>
-
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/300x250" alt="Produto 2">
-                <h3>Camiseta Roxa</h3>
-                <p>R$ 79,90</p>
-                <button class="cta-button">Remover</button>
-            </div>
-
-            <!-- Produto 3 -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/300x250" alt="Produto 3">
-                <h3>Calça Jeans</h3>
-                <p>R$ 149,90</p>
-                <button class="cta-button">Remover</button>
-            </div>
+            <!-- Os produtos serão inseridos aqui via JS -->
         </section>
 
         <!-- Total do Carrinho -->
-        <div style="margin-top: 30px; text-align: center;">
-            <h3>Total: R$ 359,70</h3>
-            <button class="cta-button">Finalizar Compra</button>
+        <div class="carrinho-total" style="margin-top: 30px; text-align: center;">
+            <h3>Total: R$ 0.00</h3>
+            <button class="cta-button" id="finalizar-compra">Finalizar Compra</button>
         </div>
     </main>
 
@@ -62,5 +38,7 @@
         <p>&copy; 2025 YoiNeru. Projeto Acadêmico.</p>
     </footer>
 
+    <!-- JS -->
+    <script src="../JS/cart.js"></script>
 </body>
 </html>

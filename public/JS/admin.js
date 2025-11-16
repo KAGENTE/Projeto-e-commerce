@@ -1,7 +1,5 @@
 const API_URL = "http://localhost:3000/api";
 
-const produtosPage = document.getElementById("productsAdmin")
-produtosPage.addEventListener("click",()=> window.location.href="/public/HTML/productsAdmin.html")
 // Seletores dos cards
 const totalProdutosEl = document.querySelectorAll(".produto-card p")[0];
 const totalPedidosEl = document.querySelectorAll(".produto-card p")[1];

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin – Usuários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo" onclick="window.location.href='admin.html'">YoiNeru</div>
+    <nav>
+      <a href="admin.html">Dashboard</a>
+      <a href="productsAdmin.html">Produtos</a>
+      <a href="ordersAdmin.html">Pedidos</a>
+      <a class="active" href="#">Usuários</a>
+      <a href="login.html">Sair</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Gerenciamento de Usuários</h1>
+    <p>Lista completa de clientes cadastrados no sistema.</p>
+  </section>
+
+  <!-- LISTA DE USUÁRIOS -->
+  <section class="produtos-admin" style="margin-bottom: 60px;">
+    <div style="width: 100%; max-width: 1100px;">
+      <table class="admin-table" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background: var(--roxo-principal); color: var(--branco);">
+            <th style="padding: 12px;">ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Função</th>
+            <th>Criado em</th>
+            <th>Total de Pedidos</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody id="usersTableBody" style="background: white;">
+          <!-- preenchido pelo JS -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Minha Loja - Painel Admin
+  </footer>
+
+  <script src="../JS/usersAdmin.js"></script>
+</body>
+</html>

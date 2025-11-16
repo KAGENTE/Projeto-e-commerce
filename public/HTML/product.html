@@ -106,8 +106,6 @@
   <header>
     <div class="logo">YoiNeru</div>
     <nav>
-      <a href="#" class="nav-link active" data-categoria="feminino">Feminino</a>
-      <a href="#" class="nav-link" data-categoria="masculino">Masculino</a>
       <a href="cart.html" class="nav-link" data-categoria="carrinho">Carrinho</a>
       <a href="account.html" class="nav-link" data-categoria="conta">Conta</a>
     </nav>
@@ -154,6 +152,13 @@
   <footer>
     <p>&copy; 2025 YoiNeru. Projeto Acadêmico.</p>
   </footer>
+<script src="../JS/products.js"></script>
 
+<script>
+  const logo = document.querySelector(".logo");
+  logo.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+</script>
 </body>
 </html>
