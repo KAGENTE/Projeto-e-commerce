@@ -47,7 +47,7 @@ async function carregarProdutos() {
 
 function editarProduto(id) {
     sessionStorage.setItem("editProductId", id);
-    window.location.href = "edit-product.html";
+    window.location.href = "editProduct.html";
 }
 
 async function excluirProduto(id) {

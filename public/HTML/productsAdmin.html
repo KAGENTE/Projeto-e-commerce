@@ -9,16 +9,16 @@
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="logo" onclick="window.location.href='admin.html'">YoiNeru</div>
-        <nav>
-            <a href="admin.html">Dashboard</a>
-            <a href="products-admin.html" class="active">Produtos</a>
-            <a href="#">Pedidos</a>
-            <a href="#">Usuários</a>
-            <a href="#" id="logout">Sair</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">YoiNeru</div>
+    <nav>
+      <a href="/public/HTML/admin.html" >Dashboard</a>
+      <a href="/public/HTML/productsAdmin.html" class="active">Produtos</a>
+      <a href="/public/HTML/ordersAdmin.html">Pedidos</a>
+      <a href="/public/HTML/usersAdmin.html">Usuários</a>
+      <a href="/public/HTML/login.html" onclick="sessionStorage.clear()">Sair</a>
+    </nav>
+  </header>
 
     <!-- HERO -->
     <section class="hero">
@@ -35,7 +35,7 @@
 
     <!-- FOOTER -->
     <footer>
-        &copy; 2025 YoiNeru - Painel Admin
+        &copy; 2025 YoiNeru
     </footer>
 
     <script src="../JS/productsAdmin.js"></script>

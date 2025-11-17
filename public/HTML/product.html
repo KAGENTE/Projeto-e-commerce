@@ -5,111 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produto - YoiNeru</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* NOVAS CLASSES PARA DETALHES DO PRODUTO */
-    .produto-detalhe-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background-color: var(--branco);
-      border-radius: 8px;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .produto-imagem {
-      flex: 1 1 400px;
-      max-width: 400px;
-      border-radius: 8px;
-      background-color: var(--lilas-suave);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .produto-imagem img {
-      width: 100%;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    .produto-info {
-      flex: 2 1 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .produto-info h2 {
-      color: var(--roxo-principal);
-      font-size: 2em;
-    }
-
-    .produto-info .price {
-      font-weight: bold;
-      color: var(--roxo-secundario);
-      font-size: 1.5em;
-    }
-
-    .produto-info p {
-      font-size: 1.1em;
-      color: var(--texto-escuro);
-    }
-
-    /* COMENTÁRIOS */
-    .comentarios-container {
-      max-width: 1000px;
-      margin: 30px auto;
-      background-color: var(--branco);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .comentario {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-    }
-
-    .comentario:last-child {
-      border-bottom: none;
-    }
-
-    .comentario strong {
-      color: var(--roxo-principal);
-    }
-
-    .avaliacao {
-      color: var(--roxo-secundario);
-      font-weight: bold;
-      margin-left: 10px;
-    }
-
-    .nova-avaliacao textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-    }
-
-    .nova-avaliacao button {
-      width: fit-content;
-    }
-  </style>
 </head>
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="logo">YoiNeru</div>
-    <nav>
-      <a href="cart.html" class="nav-link" data-categoria="carrinho">Carrinho</a>
-      <a href="account.html" class="nav-link" data-categoria="conta">Conta</a>
-    </nav>
-  </header>
+<header>
+        <div class="logo" onclick="window.location.href='index.html'">YoiNeru</div>
+        <nav>
+            <a href="cart.html" class="nav-link">Carrinho</a>
+            <a href="account.html" class="nav-link">Conta</a>
+        </nav>
+    </header>
 
   <!-- DETALHES DO PRODUTO -->
   <section class="produto-detalhe-container">
@@ -149,16 +55,11 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 YoiNeru. Projeto Acadêmico.</p>
-  </footer>
+    <footer>
+        &copy; 2025 YoiNeru
+    </footer>
 <script src="../JS/products.js"></script>
 
-<script>
-  const logo = document.querySelector(".logo");
-  logo.addEventListener("click", () => {
-    window.location.href = "index.html";
-  });
-</script>
+
 </body>
 </html>

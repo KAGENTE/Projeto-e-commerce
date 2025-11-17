@@ -281,3 +281,172 @@ footer {
 .btn-delete-order:hover {
     background-color: #96281b;
 }
+
+.produto-detalhe-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: var(--branco);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .produto-imagem {
+      flex: 1 1 400px;
+      max-width: 400px;
+      border-radius: 8px;
+      background-color: var(--lilas-suave);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .produto-imagem img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .produto-info {
+      flex: 2 1 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .produto-info h2 {
+      color: var(--roxo-principal);
+      font-size: 2em;
+    }
+
+    .produto-info .price {
+      font-weight: bold;
+      color: var(--roxo-secundario);
+      font-size: 1.5em;
+    }
+
+    .produto-info p {
+      font-size: 1.1em;
+      color: var(--texto-escuro);
+    }
+
+    /* COMENTÁRIOS */
+    .comentarios-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: var(--branco);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .comentario {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .comentario:last-child {
+      border-bottom: none;
+    }
+
+    .comentario strong {
+      color: var(--roxo-principal);
+    }
+
+    .avaliacao {
+      color: var(--roxo-secundario);
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .nova-avaliacao textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .nova-avaliacao button {
+      width: fit-content;
+    }
+
+/* ---- FORMULÁRIOS BONITOS ---- */
+
+.form-card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--roxo-principal);
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    border: 2px solid var(--lilas-suave);
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #fdfdfd;
+    transition: 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--roxo-secundario);
+    outline: none;
+    box-shadow: 0 0 4px rgba(157, 56, 189, 0.4);
+}
+
+.form-separator {
+    margin: 30px 0;
+    border-top: 2px solid var(--lilas-suave);
+    width: 100%;
+}
+
+.form-wrapper-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Ajusta botões dentro de formulários */
+.form-card button.cta-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
