@@ -136,7 +136,30 @@ novaAvaliacaoBtn.addEventListener("click", async () => {
         alert("Erro ao enviar review.");
     }
 });
+const reviewSummaryEl = document.getElementById("review-summary");
 
+async function carregarResumoIA() {
+    try {
+        const res = await fetch(`${API_URL}/reviews/products/${productId}/IA`, {
+            method : "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (!res.ok) throw new Error("Erro ao carregar resumo da IA");
+
+        const data = await res.json();
+
+        // O seu back-end deve retornar algo como { summary: "texto do resumo" }
+        reviewSummaryEl.textContent = data.summary || "Não foi possível gerar resumo.";
+
+    } catch (err) {
+        console.error(err);
+        reviewSummaryEl.textContent = "Erro ao carregar resumo da IA.";
+    }
+}
 // Inicializa
 carregarProduto();
 carregarReviews();
+carregarResumoIA();

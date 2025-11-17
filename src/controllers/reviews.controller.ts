@@ -60,4 +60,8 @@ export const ReviewController = {
       return res.status(500).json({ error: "Erro ao buscar reviews." });
     }
   },
+  async getSummary(req: Request, res: Response) {
+        const summary = req.body.reviewSummary;
+        return res.json({ summary });
+    }
 };
