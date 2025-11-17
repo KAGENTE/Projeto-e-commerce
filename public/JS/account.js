@@ -45,7 +45,7 @@ async function carregarPedidos(userId) {
 
             tr.innerHTML = `
                 <td style="padding:10px;">${order.id}</td>
-                <td>${new Date(order.createdAt).toLocaleDateString()}</td>
+                <td>${new Date(order.data).toLocaleDateString()}</td>
                 <td>${order.status || "Pendente"}</td>
                 <td>R$ ${order.total?.toFixed(2) || "0.00"}</td>
             `;

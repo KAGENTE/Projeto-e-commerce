@@ -40,12 +40,6 @@ async function carregarUsuarios() {
                 <td>${user.role}</td>
                 <td>${user.createdAt ? new Date(user.createdAt).toLocaleDateString() : "-"}</td>
                 <td>${pedidosPorUsuario[user.id] || 0}</td>
-                <td>
-                    <button class="btn-edit"
-                        onclick="window.location.href='userOrders.html?userId=${user.id}'">
-                        Ver pedidos
-                    </button>
-                </td>
             `;
 
             tabela.appendChild(tr);

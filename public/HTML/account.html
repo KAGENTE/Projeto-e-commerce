@@ -24,48 +24,34 @@
     </section>
 
     <!-- CONTAINER PRINCIPAL -->
-    <section class="conta-container" style="padding: 40px 5%; display: flex; flex-direction: column; gap: 40px; max-width: 900px; margin: auto;">
+  <section class="conta-container">
 
-        <!-- DADOS DO USUÁRIO -->
-        <div class="conta-card" style="
-            background: var(--branco);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        ">
-            <h2 style="color: var(--roxo-principal); margin-bottom: 15px;">Seus Dados</h2>
+    <div class="conta-card">
+        <h2>Seus Dados</h2>
+        <p><strong>ID:</strong> <span id="userId">...</span></p>
+        <p><strong>Nome:</strong> <span id="userName">...</span></p>
+        <p><strong>Email:</strong> <span id="userEmail">...</span></p>
+    </div>
 
-            <p><strong>ID:</strong> <span id="userId">...</span></p>
-            <p><strong>Nome:</strong> <span id="userName">...</span></p>
-            <p><strong>Email:</strong> <span id="userEmail">...</span></p>
-        </div>
+    <div class="conta-card">
+        <h2>Meus Pedidos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="ordersBody">
+                <!-- preenchido pelo JS -->
+            </tbody>
+        </table>
+    </div>
 
-        <!-- LISTA DE PEDIDOS -->
-        <div class="conta-card" style="
-            background: var(--branco);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        ">
-            <h2 style="color: var(--roxo-principal); margin-bottom: 15px;">Meus Pedidos</h2>
+</section>
 
-            <table style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr style="background: var(--roxo-principal); color: var(--branco);">
-                        <th style="padding: 10px;">ID</th>
-                        <th>Data</th>
-                        <th>Status</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-
-                <tbody id="ordersBody" style="background: white;">
-                    <!-- preenchido pelo JS -->
-                </tbody>
-            </table>
-        </div>
-
-    </section>
 
     <!-- FOOTER -->
     <footer>
