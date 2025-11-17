@@ -46,15 +46,15 @@ async function carregarProdutos() {
 }
 
 function editarProduto(id) {
-    sessionStorage.setItem("editProductId", id);
-    window.location.href = "editProduct.html";
+    window.location.href = `editProduct.html?id=${id}`;
 }
+
 
 async function excluirProduto(id) {
     if (!confirm("Deseja realmente excluir este produto?")) return;
 
     try {
-        await fetch(`${API_URL}/products/${id}`, {
+        await fetch(`${API_URL}/admin/product/${id}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${token}`
