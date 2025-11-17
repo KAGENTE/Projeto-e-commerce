@@ -7,8 +7,6 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -33,18 +31,13 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
-
     "target": "ES2020",
     "module": "CommonJS",
-    "outDir": "dist",
-    "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
