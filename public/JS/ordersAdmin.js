@@ -31,17 +31,11 @@ async function carregarPedidos() {
             card.innerHTML = `
                 <div class="pedido-info">
                     <h3>Pedido #${p.id}</h3>
-                    <p><strong>Usuário:</strong> ${p.user?.name ?? "Desconhecido"}</p>
+                    <p><strong>ID do usuário:</strong> ${p.userId ?? "Desconhecido"}</p>
                     <p><strong>Total:</strong> R$ ${p.total.toFixed(2)}</p>
-                    <p><strong>Status:</strong> ${p.status}</p>
-                    <p><strong>Data:</strong> ${new Date(p.createdAt).toLocaleString()}</p>
-                </div>
-
-                <div class="pedido-btns">
-                    <button class="btn-status" onclick="atualizarStatus(${p.id})">Atualizar Status</button>
-                    <button class="btn-delete-order" onclick="deletarPedido(${p.id})">Excluir</button>
-                </div>
-            `;
+                    <p><strong>Status:</strong> Pendente</p>
+                    <p><strong>Data:</strong> ${new Date(p.data).toLocaleString()}</p>
+                </div>`;
 
             pedidosLista.appendChild(card);
         });
