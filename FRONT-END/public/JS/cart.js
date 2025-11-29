@@ -34,8 +34,8 @@ function carregarCarrinho() {
 
         cartContainer.appendChild(produtoCard);
     });
-
-    const totalEl = document.querySelector("#totalCarrinho");
+    
+    const totalEl = document.getElementById("totalCarrinho");
     if (totalEl) {
         totalEl.textContent = `Total: R$ ${total.toFixed(2)}`;
     }

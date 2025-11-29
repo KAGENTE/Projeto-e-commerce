@@ -1,5 +1,8 @@
 const API_URL = "http://localhost:3000/api";
 token = sessionStorage.getItem("token")
+if(!token){
+    window.location.href = "login.html"
+}
 // Carregar perfil do usuário
 async function carregarPerfil() {
     try {
@@ -15,6 +18,7 @@ async function carregarPerfil() {
             console.error("Erro ao carregar perfil:", user);
             return;
         }
+        
 
         document.getElementById("userId").textContent = user.id;
         document.getElementById("userName").textContent = user.name;

@@ -31,10 +31,10 @@ form.addEventListener("submit", async (e) => {
     setTimeout(() => {
       if (json.role === "admin") {
         sessionStorage.setItem("token", json.token);
-        window.location.href = "/public/HTML/admin.html";
+        window.location.href = "admin.html";
       } else {
         sessionStorage.setItem("token", json.token);
-        window.location.href = "/public/HTML/index.html";
+        window.location.href = "index.html";
       }
     }, 1200);
 

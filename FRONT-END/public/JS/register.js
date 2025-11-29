@@ -29,7 +29,7 @@ form.addEventListener("submit", async (e) => {
     msg.textContent = "Cadastro realizado! Redirecionando para Login...";
 
     setTimeout(() => {
-      window.location.href = "/public/HTML/login.html";
+      window.location.href = "login.html";
     }, 1500);
 
   } catch (error) {
